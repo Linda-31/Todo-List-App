@@ -223,43 +223,74 @@ export default function Dashboard() {
 
   return (
     <>
-      <nav className="dashboard-navbar">
-        <div className="navbar-left">
-          <div className="logo-section-nav">
-            <img src="/images/logo1.png" alt="Logo" />
+
+      <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
+        <div className="container-fluid">
+
+          <a className="navbar-brand d-flex align-items-center" href="/tasks">
+            <img src="/images/logo1.png" alt="Logo" width="40" height="40" className="me-2 ms-3 rounded-circle" />
+            <h1 className="me-2">Task Management</h1>
+          </a>
+
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style={{ borderColor: "white" }}
+          >
+            <span className="navbar-toggler-icon" style={{ filter: "invert(1)" }}></span>
+          </button>
+
+
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <button
+                className={`nav-btn me-3 ${viewMode === "board" ? "active" : ""}`}
+                onClick={() => setViewMode("board")}
+              >
+                Board
+              </button>
+              <button
+                className={`nav-btn ${viewMode === "table" ? "active" : ""}`}
+                onClick={() => setViewMode("table")}
+              >
+                Table
+              </button>
+            </div>
+
+            <div className="d-flex align-items-center">
+
+              <button
+                className="add-btn me-4"
+                onClick={() => {
+                  setShowModal(true);
+                  reset();
+                }}
+              >
+                Add Task
+              </button>
+
+
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                alt="Profile"
+                className="rounded-circle me-4"
+                width="40"
+                height="40"
+              />
+
+
+              <button className="logout-btn" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
           </div>
-          <h1>Task Management</h1>
-          <button
-            className={`nav-btn ${viewMode === "board" ? "active" : ""}`}
-            onClick={() => setViewMode("board")}
-          >
-            Board
-          </button>
-          <button
-            className={`nav-btn ${viewMode === "table" ? "active" : ""}`}
-            onClick={() => setViewMode("table")}
-          >
-            Table
-          </button>
-        </div>
-        <div className="navbar-right">
-          <button
-            onClick={() => {
-              setShowModal(true);
-              reset();
-            }}
-            className="add-btn"
-          >
-            Add Task
-          </button>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-            alt="Profile"
-            className="profile-logo"
-          />
-          <button onClick={handleLogout} className="logout-btn">
-            Logout
-          </button>
         </div>
       </nav>
 

@@ -27,7 +27,7 @@ html {
 .login-container {
   display: flex;
   width: 900px;
-  height: 600px;
+  height: 610px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -345,7 +345,7 @@ table tbody tr td a:hover {
 }
 
 /* 🆕 NAVBAR */
-.dashboard-navbar {
+.navbar{
   background: linear-gradient(135deg, #2e165d, #5e2d62 );
   backdrop-filter: blur(10px);
   display: flex;
@@ -353,32 +353,33 @@ table tbody tr td a:hover {
   justify-content: space-between;
   padding: 12px 25px;
   width: 101vw;
-  margin-top: 70px;
+  margin-top: 65px;
   color: white;
   /* margin-bottom: 25px; */
   
 }
 
 /* Left Side */
-.dashboard-navbar .navbar-left h1 {
+.navbar .navbar-brand h1 {
   font-size: 1.4rem;
   font-weight: 700;
-  margin-left: 1px;
+  margin-left: -13px;
   margin-top: 5px;
+  color:white;
 }
 
-.dashboard-navbar .navbar-left {
+.navbar .navbar-brand {
   display: flex;
   gap: 20px;
 }
 
 /* Center Buttons */
-.dashboard-navbar .navbar-center {
+.navbar .navbar-center {
   display: flex;
   gap: 10px;
 }
 
-.dashboard-navbar .nav-btn {
+.navbar .nav-btn {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: none;
@@ -389,20 +390,20 @@ table tbody tr td a:hover {
   transition: all 0.3s;
 }
 
-.dashboard-navbar .nav-btn.active {
+.navbar .nav-btn.active {
   background: #e5e2eb;
   color: #1a1a1a;
   box-shadow: 0 0 8px rgba(115, 42, 111, 0.6);
 }
 
 /* Right Side */
-.dashboard-navbar .navbar-right {
+.navbar .navbar-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.dashboard-navbar .profile-logo {
+.navbar .profile-logo {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -411,7 +412,7 @@ table tbody tr td a:hover {
 }
 
 /* Logout Button */
-.dashboard-navbar .logout-btn {
+.navbar .logout-btn {
   background: #d2a8d8;
   border: none;
   padding: 12px 15px;
@@ -422,7 +423,7 @@ table tbody tr td a:hover {
   transition: background 0.3s;
 }
 
-.dashboard-navbar .logout-btn:hover {
+.navbar .logout-btn:hover {
   background: #e5e2eb;
   color: #1a1a1a;
 }
@@ -589,7 +590,7 @@ table tbody tr td a:hover {
   object-fit: contain;
   position: relative;
   left:-40px;
-  top:10px;
+  top:8px;
 }
 
 .logo-section-nav {
@@ -603,6 +604,7 @@ table tbody tr td a:hover {
   background-color: #f0f0f0; 
   margin-left: 20px;
 }
+
 
 .logo-section-nav img {
   width: 100%;
