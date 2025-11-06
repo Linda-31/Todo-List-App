@@ -42,8 +42,7 @@ Below is the screenshot of the final application UI:
 
 ---
 
-## 🌐 Live Demo / YouTube Video
-🎥 **Watch the full tutorial here:**  
+## 🎥 Live Demo video
 👉 [YouTube Demo Video](https://youtu.be/3fEDytEKiRA)
 
 ## ⚙️ How It Works
