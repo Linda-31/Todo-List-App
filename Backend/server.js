@@ -5,11 +5,7 @@ import jwt from "jsonwebtoken";
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://todo-list-app-steel-six.vercel.app/",
-  })
-);
+app.use(cors());
 
 let nextId = 1;
 const users = [];
