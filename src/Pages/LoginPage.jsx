@@ -8,7 +8,7 @@ import '../Styles/style.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const illustration = "images/image2.png";
-const API_BASE = "http://localhost:5000/api/auth";
+const API_BASE = "https://todo-backend-api-5b2i.onrender.com/api/auth";
 
 function LoginPage() {
     const [isLogin, setIsLogin] = useState(true);
