@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdEdit, MdDelete } from "react-icons/md";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://todo-backend-api-5b2i.onrender.com/api";
 
 const TaskCard = memo(({ task, onEdit, onDelete, hideTitle, index, isDraggable }) => {
   if (!isDraggable) {
