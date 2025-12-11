@@ -5,7 +5,11 @@ import jwt from "jsonwebtoken";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://todo-list-app-steel-six.vercel.app/",
+  })
+);
 
 let nextId = 1;
 const users = [];
@@ -79,4 +83,8 @@ app.delete("/api/tasks/:id", (req, res) => {
   res.json({ message: "Deleted" });
 });
 
-app.listen(5000, () => console.log("✅ Server running at https://todo-backend-api-5b2i.onrender.com"));
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
